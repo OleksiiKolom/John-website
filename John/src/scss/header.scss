@@ -1,0 +1,152 @@
+// ===================================================================================
+
+// ___Стилі для header___
+
+.header {
+	padding: 33px 0px;
+
+	@media (max-width: $mobile) {
+		padding: 20px 0px 12px 0px;
+	}
+
+	&__container {
+		max-width: 1062px;
+		padding: 0px 15px;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: end;
+	}
+}
+
+.navigation {
+
+	@media (max-width: $mobile) {
+		position: fixed;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		overflow-y: auto;
+		padding: 70px 15px 0px 15px;
+		transition: all 0.3s ease-in;
+		background-color: rgba(255, 255, 255, 0.92);
+
+		&::before {
+			content: '';
+			width: 100%;
+			height: 50px;
+			position: fixed;
+			top: 0;
+			left: -100%;
+			background-color: var(--bg-primary);
+			z-index: 2;
+			transition: all 0.3s ease;
+		}
+
+		&.active,
+		&.active::before {
+			left: 0;
+		}
+	}
+
+
+	&__list {
+		display: flex;
+		column-gap: 33px;
+
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			row-gap: 25px;
+			text-align: center;
+		}
+	}
+
+	&__link {
+		color: #000;
+		font-size: toRem(20);
+		font-weight: 500;
+		transition: all 0.3s ease 0s;
+
+		&._active {
+			color: var(--text-accent_1);
+		}
+
+		@media (min-width: $tablet) {
+			&:hover {
+				color: var(--text-accent_1);
+			}
+		}
+
+		@media (max-width: $mobile) {
+			font-size: 36px;
+		}
+	}
+}
+
+// ===================================================================================
+
+// ___burger___ 
+
+.header__burger {
+	$burgerColor: $mainColor;
+	$burgerWidth: 30;
+	$burgerHeight: 18;
+	$burgerHeightLine: 2;
+	$burgerMidPoint: (
+		$burgerHeightLine + math.div(($burgerHeight - ($burgerHeightLine * 3)), 2)
+	);
+
+@media (max-width: $mobile) {
+	position: relative;
+	width: $burgerWidth + px;
+	height: $burgerHeight + px;
+	display: block;
+	cursor: pointer;
+
+	span {
+		position: absolute;
+		width: 100%;
+		height: $burgerHeightLine + px;
+		background-color: $burgerColor;
+		border-radius: math.div($burgerHeightLine, 2) + px;
+		left: 0;
+		transition: 0.25s ease-in-out;
+
+		&:nth-child(1) {
+			top: 0px;
+		}
+
+		&:nth-child(2),
+		&:nth-child(3) {
+			top: $burgerMidPoint + px;
+		}
+
+		&:nth-child(4) {
+			bottom: 0px;
+		}
+	}
+
+	&.active {
+		span {
+
+			&:nth-child(1),
+			&:nth-child(4) {
+				width: 0;
+				left: 50%;
+				top: $burgerMidPoint + px;
+			}
+
+			&:nth-child(2) {
+				transform: rotate(45deg);
+			}
+
+			&:nth-child(3) {
+				transform: rotate(-45deg);
+			}
+		}
+	}
+}
+}
+
+// ===================================================================================

@@ -1,0 +1,79 @@
+// ===================================================================================
+
+// ___Стилі для загальних БЕМ блоків, заголовків та інше___
+
+.page {
+    padding-top: 63px;
+
+    @media (max-width: $mobile) {
+        padding-top: 24px;
+    }
+}
+
+.main-title {
+    font-size: toRem(44);
+    font-weight: 700;
+    line-height: 1.36364;
+
+    @media (max-width: $tablet) {
+        font-size: toRem(36);
+    }
+
+    @media (max-width: $mobile) {
+        font-size: toRem(30);
+    }
+}
+.main-text {
+}
+.button {
+    color: var(--text-secondary);
+    font-size: toRem(20);
+    font-weight: 500;
+    padding: em(9, 20) em(20, 20) em(17, 20) em(20, 20);
+    background-color: var(--bg-accent);
+    border-radius: 2px; 
+    display: inline-block;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: #d54949;
+    }
+}
+
+.year {
+    display: inline-block;
+    background-color: #142850;
+    color: var(--text-secondary);
+    border-radius: 16px;
+    font-size: toRem(18);
+    font-weight: 900;
+    padding: em(4, 18) em(10, 18) em(6, 18) em(10, 18);
+
+    @media (max-width: $mobile) {
+        font-size: toRem(16);
+    }
+}
+.category {
+    color: var(--text-accent_3);
+    font-size: toRem(20);
+
+    @media (max-width: $mobile) {
+        font-size: toRem(16);
+    }
+}
+
+.social {
+    display: flex;
+    column-gap: 35px;
+
+    &__item {
+        font-size: 30px;
+        transition: all 0.3s ease;
+
+        &:hover {
+            color: var(--text-accent_1);
+        }
+    }
+}
+
+// ===================================================================================

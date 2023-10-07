@@ -1,0 +1,47 @@
+// ===================================================================================
+
+// ___Стилі для footer___
+
+.footer {
+    padding: 51px 0px 54px 0px;
+    text-align: center;
+
+    &__container {
+    }
+
+    &__social {
+        justify-content: center;
+
+        &:not(:last-child) {
+            margin-bottom: 26px;
+        }
+    }
+
+    &__copy {
+    }
+}
+
+
+
+// ===================================================================================
+
+
+// ___Адаптив footer___
+
+@media (max-width: $containerWidth) {
+
+}
+
+@media (max-width: $tablet) {
+
+}
+
+@media (max-width: $mobile) {
+
+}
+
+@media (max-width: $mobileSmall) {
+
+}
+
+// ===================================================================================

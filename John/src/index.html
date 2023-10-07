@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+	"title":"Home Page"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{
+			"link":"0"
+			})
+			<main class="page">
+				<section class="hello">
+					<div class="hello__container">
+						<div class="hello__content">
+							<h1 class="hello__title main-title">Hi, I am John,<br>Creative Technologist</h1>
+							<div class="hello__text main-text">
+								<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+							</div>
+							<a href="" class="hello__link button">Download Resume</a>
+						</div>
+						<div class="hello__avatar">
+							<img src="@img/hello/avatar.jpg" alt="Avatar">
+						</div>
+					</div>
+				</section>
+				<section class="recent-posts">
+					<div class="recent-posts__container">
+						<div class="recent-posts__header">
+							<h4 class="recent-posts__title">Recent posts</h4>
+							<a href="" class="recent-posts__link">View all</a>
+						</div>
+						<div class="recent-posts__content">
+							<div class="recent-posts__item recent-post">
+								<h3 class="recent-post__title">Making a design system from scratch</h3>
+								<div class="recent-post__info">12 Feb 2020 <span>|</span> Design, Pattern</div>
+								<div class="recent-post__text main-text">
+									<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+								</div>
+							</div>
+							<div class="recent-posts__item recent-post">
+								<h3 class="recent-post__title">Creating pixel perfect icons in Figma</h3>
+								<div class="recent-post__info">12 Feb 2020 <span>|</span> Figma, Icon Design</div>
+								<div class="recent-post__text main-text">
+									<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="featured-works">
+					<div class="featured-works__container">
+						<h4 class="featured-works__title">Featured works</h4>
+						<div class="featured-works__items work">
+							<article class="work__item item-work">
+								<a  href="" class="item-work__image">
+									<img src="@img/works/01.jpg" alt="Work №1">
+								</a>
+								<div class="item-work__body">
+									<a href="" class="item-work__title">Designing Dashboards</a>
+									<div class="item-work__info">
+										<div class="item-work__year year">2020</div>
+										<div class="item-work__category category">Dashboard</div>
+									</div>
+									<div class="item-work__text main-text">
+										<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+									</div>
+								</div>
+							</article>
+							<article class="work__item item-work">
+								<a  href="" class="item-work__image">
+									<img src="@img/works/02.jpg" alt="Work №2">
+								</a>
+								<div class="item-work__body">
+									<a href="" class="item-work__title">Vibrant Portraits of 2020</a>
+									<div class="item-work__info">
+										<div class="item-work__year year">2018</div>
+										<div class="item-work__category category">Illustration</div>
+									</div>
+									<div class="item-work__text main-text">
+										<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+									</div>
+								</div>
+							</article>
+							<article class="work__item item-work">
+								<a  href="" class="item-work__image">
+									<img src="@img/works/03.jpg" alt="Work №3">
+								</a>
+								<div class="item-work__body">
+									<a href="" class="item-work__title">36 Days of Malayalam type</a>
+									<div class="item-work__info">
+										<div class="item-work__year year">2018</div>
+										<div class="item-work__category category">Typography</div>
+									</div>
+									<div class="item-work__text main-text">
+										<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+									</div>
+								</div>
+							</article>
+						</div>
+					</div>
+				</section>	
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		@@include('html/_js.htm',{})
+	</body>
+</html>
